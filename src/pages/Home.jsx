@@ -44,8 +44,8 @@ export default function Home() {
       <Hero />
       
       {/* Main Workspace */}
-      <div id="generator" className="flex h-[calc(100vh-4rem)] min-h-0 bg-slate-950 border-t border-slate-800">
-        <aside className="w-80 bg-slate-900/80 backdrop-blur-xl border-r border-slate-800 flex flex-col transition-all duration-300 shadow-xl z-20">
+      <div id="generator" className="flex flex-col lg:flex-row lg:h-[calc(100vh-4rem)] bg-slate-950 border-t border-slate-800 lg:overflow-hidden relative">
+        <aside className="w-full lg:w-80 bg-slate-900/80 backdrop-blur-xl border-b lg:border-b-0 lg:border-r border-slate-800 flex flex-col transition-all duration-300 shadow-xl z-20 shrink-0 h-[400px] lg:h-auto overflow-hidden">
           <div className="flex-1 overflow-y-auto py-6 px-6 space-y-8 scrollbar-thin scrollbar-thumb-slate-700">
             <div>
               <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-6 flex items-center gap-2">
@@ -79,8 +79,8 @@ export default function Home() {
           </div>
         </aside>
 
-        <main className="flex-1 flex flex-col min-w-0 relative">
-          <header className="h-16 flex items-center justify-between px-8 border-b border-slate-800 bg-slate-900/40 backdrop-blur-md z-10 shrink-0">
+        <main className="flex-1 flex flex-col min-w-0 relative min-h-[400px] lg:min-h-0">
+          <header className="h-16 flex items-center justify-between px-4 lg:px-8 border-b border-slate-800 bg-slate-900/40 backdrop-blur-md z-10 shrink-0">
             <div className="flex items-center gap-4">
               <div className="px-3 py-1.5 text-sm font-medium rounded-lg bg-purple-500/20 text-purple-400 border border-purple-500/30">
                 Interactive Preview
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
         </main>
 
-        <aside className="w-[400px] bg-slate-900 border-l border-slate-800 flex flex-col shadow-2xl z-20">
+        <aside className="w-full lg:w-[400px] bg-slate-900 border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col shadow-2xl z-20 h-[500px] lg:h-auto shrink-0">
           <div className="h-16 flex items-center justify-between px-5 border-b border-slate-800 shrink-0">
             <h2 className="text-sm font-semibold text-slate-200 flex items-center gap-2">
               <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
