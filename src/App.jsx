@@ -96,9 +96,36 @@ const HomePage = () => {
               onClick={() => document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all duration-300 ring-2 ring-indigo-400/20 flex items-center gap-3 cursor-pointer mb-6"
             >
-              Get Started
+              Try it Now
               <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
+      <section className="py-12 px-8 max-w-6xl mx-auto w-full z-10 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl p-6 border border-slate-800/80 hover:border-indigo-500/30 transition-colors shadow-xl">
+            <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center text-indigo-400 mb-4">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Real-time Preview</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">See changes as you slide. Pixel-perfect visual feedback translates instantly to your target layout.</p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl p-6 border border-slate-800/80 hover:border-emerald-500/30 transition-colors shadow-xl">
+            <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 mb-4">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Clean Code</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Optimized Dart and Kotlin output without bulky constraints. Drop-in, beautifully nested codebase.</p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl p-6 border border-slate-800/80 hover:border-purple-500/30 transition-colors shadow-xl">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mb-4">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Multi-Platform</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">Support for Flutter, SwiftUI, and Compose giving you unparalleled design coverage natively.</p>
           </div>
         </div>
       </section>
@@ -201,6 +228,14 @@ const HomePage = () => {
           </div>
         </aside>
       </div>
+
+      {/* Documentation / Guide Snippet */}
+      <section className="py-24 px-8 max-w-4xl mx-auto w-full text-center relative z-10">
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">What is a Flutter Container widget?</h2>
+        <p className="text-slate-400 text-lg leading-relaxed">
+          The <strong className="text-indigo-400 font-semibold">Flutter Container</strong> is a powerful convenience widget that combines common painting, positioning, and sizing natively into one unified bounding box. Often comparable to a standard HTML <code className="bg-slate-800 px-2 py-1 rounded text-sm font-mono">&lt;div&gt;</code>, the container handles intricate padding gradients, box shadows, and background radius decorations, making it the absolute most critical foundational UI building block in cross-platform mobile development!
+        </p>
+      </section>
     </main>
   )
 }
