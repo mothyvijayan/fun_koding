@@ -84,20 +84,26 @@ const HomePage = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px] pointer-events-none"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
-            <span className="text-white">Generating Mobile UI </span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Code Visually.</span>
+          <h1 className="text-5xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+            <span className="text-white">The Smartest UI Generator for </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Flutter & Cross-Platform Devs</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Generate pixel-perfect Flutter, Compose, and SwiftUI code. Copy, paste, and build.
+            Stop guessing padding and hex codes. Visually design your containers and export production-ready Dart code instantly.
           </p>
-          <button 
-            onClick={() => document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all duration-300 ring-2 ring-indigo-400/20 flex items-center gap-3 cursor-pointer"
-          >
-            Get Started
-            <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-          </button>
+          <div className="flex flex-col items-center">
+            <button 
+              onClick={() => document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all duration-300 ring-2 ring-indigo-400/20 flex items-center gap-3 cursor-pointer mb-6"
+            >
+              Get Started
+              <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+            </button>
+            <div className="flex items-center gap-2 text-sm text-slate-500 font-medium bg-slate-900/50 px-4 py-2 rounded-full border border-slate-800/60 backdrop-blur-sm">
+              <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+              Used by 500+ developers to speed up UI workflows.
+            </div>
+          </div>
         </div>
       </section>
 
