@@ -85,11 +85,11 @@ const HomePage = () => {
         
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
           <h1 className="text-5xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-            <span className="text-white">The Smartest UI Generator for </span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Flutter & Cross-Platform Devs</span>
+            <span className="text-white">Generate Flutter UI </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">in Seconds.</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Stop guessing padding and hex codes. Visually design your containers and export production-ready Dart code instantly.
+            Stop manual coding. Visually design your components and export production-ready Dart code.
           </p>
           <div className="flex flex-col items-center">
             <button 
@@ -99,10 +99,6 @@ const HomePage = () => {
               Get Started
               <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
             </button>
-            <div className="flex items-center gap-2 text-sm text-slate-500 font-medium bg-slate-900/50 px-4 py-2 rounded-full border border-slate-800/60 backdrop-blur-sm">
-              <svg className="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              Used by 500+ developers to speed up UI workflows.
-            </div>
           </div>
         </div>
       </section>
@@ -231,20 +227,31 @@ function App() {
               Tools
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 rounded-t-full"></span>
             </Link>
+            <Link to="/" className="text-slate-400 hover:text-white transition-colors">About</Link>
           </div>
         </div>
         
         <div className="flex items-center gap-6 text-sm font-medium">
-          <Link to="/terms" className="text-slate-400 hover:text-slate-200 transition-colors">Terms & Conditions</Link>
-          <Link to="/privacy" className="text-slate-400 hover:text-slate-200 transition-colors">Privacy Policy</Link>
+          <Link to="/privacy" className="text-slate-400 hover:text-slate-200 transition-colors">Privacy</Link>
         </div>
       </nav>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<Terms />} />
-      </Routes>
+      <main className="flex-1 flex flex-col min-h-0">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+        </Routes>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-800 bg-slate-950 py-6 px-8 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 shrink-0 z-10 relative">
+        <p>&copy; 2026 UI Gen Pro. All rights reserved.</p>
+        <div className="flex items-center gap-6 mt-4 md:mt-0">
+          <Link to="/terms" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+          <Link to="/privacy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+        </div>
+      </footer>
       
     </div>
   )
