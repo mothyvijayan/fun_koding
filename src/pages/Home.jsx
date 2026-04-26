@@ -6,12 +6,12 @@ const SliderControl = ({ label, value, min, max, onChange, unit = "px" }) => (
   <div className="space-y-3">
     <div className="flex justify-between items-center">
       <label className="text-sm font-medium text-slate-300">{label}</label>
-      <span className="text-xs font-mono text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded-md">{value}{unit}</span>
+      <span className="text-xs font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded-md">{value}{unit}</span>
     </div>
     <input 
       type="range" min={min} max={max} value={value} 
       onChange={(e) => onChange(Number(e.target.value))}
-      className="w-full h-1.5 bg-slate-700/50 rounded-lg appearance-none cursor-pointer accent-indigo-500 hover:accent-indigo-400 transition-all"
+      className="w-full h-1.5 bg-slate-700/50 rounded-lg appearance-none cursor-pointer accent-purple-500 hover:accent-purple-400 transition-all"
     />
   </div>
 );
@@ -30,20 +30,19 @@ export default function Home() {
     setTimeout(() => setShowToast(false), 2000);
   };
 
-  const dartCode = \`Container(
-  width: \${width}.0,
-  height: \${height}.0,
+  const dartCode = String.raw`Container(
+  width: ${width}.0,
+  height: ${height}.0,
   decoration: BoxDecoration(
-    color: Color(0xFF\${color.replace('#', '').toUpperCase()}),
-    borderRadius: BorderRadius.circular(\${borderRadius}.0),\${elevation > 0 ? \`\\n    boxShadow: [\\n      BoxShadow(\\n        color: Colors.black.withOpacity(0.2),\\n        spreadRadius: 0.0,\\n        blurRadius: \${elevation * 2}.0,\\n        offset: Offset(0.0, \${elevation}.0),\\n      ),\\n    ],\` : ''}
+    color: Color(0xFF${color.replace('#', '').toUpperCase()}),
+    borderRadius: BorderRadius.circular(${borderRadius}.0),${elevation > 0 ? `\n    boxShadow: [\n      BoxShadow(\n        color: Colors.black.withOpacity(0.2),\n        spreadRadius: 0.0,\n        blurRadius: ${elevation * 2}.0,\n        offset: Offset(0.0, ${elevation}.0),\n      ),\n    ],` : ''}
   ),
-)\`;
+)`;
 
   return (
-    <main className="flex-1 flex flex-col min-h-0">
+    <main className="flex-1 flex flex-col min-h-0 bg-slate-950">
       <Hero />
-      <FeatureCards />
-
+      
       {/* Main Workspace */}
       <div id="generator" className="flex h-[calc(100vh-4rem)] min-h-0 bg-slate-950 border-t border-slate-800">
         <aside className="w-80 bg-slate-900/80 backdrop-blur-xl border-r border-slate-800 flex flex-col transition-all duration-300 shadow-xl z-20">
@@ -63,7 +62,7 @@ export default function Home() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <label className="text-sm font-medium text-slate-300">Background Color</label>
-                    <span className="text-xs font-mono text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded-md uppercase">{color}</span>
+                    <span className="text-xs font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded-md uppercase">{color}</span>
                   </div>
                   <div className="flex gap-3">
                     <div className="h-10 w-10 shrink-0 rounded-lg shadow-inner border border-slate-700 overflow-hidden relative">
@@ -83,7 +82,7 @@ export default function Home() {
         <main className="flex-1 flex flex-col min-w-0 relative">
           <header className="h-16 flex items-center justify-between px-8 border-b border-slate-800 bg-slate-900/40 backdrop-blur-md z-10 shrink-0">
             <div className="flex items-center gap-4">
-              <div className="px-3 py-1.5 text-sm font-medium rounded-lg bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+              <div className="px-3 py-1.5 text-sm font-medium rounded-lg bg-purple-500/20 text-purple-400 border border-purple-500/30">
                 Interactive Preview
               </div>
             </div>
@@ -94,11 +93,11 @@ export default function Home() {
             <div className="relative z-10 flex items-center justify-center w-full h-full p-4">
               <div 
                  style={{ 
-                   width: \`\${width}px\`, 
-                   height: \`\${height}px\`, 
-                   borderRadius: \`\${borderRadius}px\`,
+                   width: `${width}px`, 
+                   height: `${height}px`, 
+                   borderRadius: `${borderRadius}px`,
                    backgroundColor: color,
-                   boxShadow: elevation > 0 ? \`0px \${elevation}px \${elevation * 2.5}px rgba(0,0,0,0.25), 0px \${elevation / 2}px \${elevation}px rgba(0,0,0,0.15)\` : 'none',
+                   boxShadow: elevation > 0 ? `0px ${elevation}px ${elevation * 2.5}px rgba(0,0,0,0.25), 0px ${elevation / 2}px ${elevation}px rgba(0,0,0,0.15)` : 'none',
                    transition: 'all 0.1s cubic-bezier(0.4, 0, 0.2, 1)'
                  }}
                  className="flex items-center justify-center relative"
@@ -117,7 +116,7 @@ export default function Home() {
             </h2>
             <button 
               onClick={copyToClipboard}
-              className={\`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 \${showToast ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700'}\`}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${showToast ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 border border-slate-700'}`}
             >
               {showToast ? (
                 <>
@@ -138,13 +137,7 @@ export default function Home() {
         </aside>
       </div>
 
-      {/* Documentation / Guide Snippet */}
-      <section className="py-24 px-8 max-w-4xl mx-auto w-full text-center relative z-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">What is a Flutter Container widget?</h2>
-        <p className="text-slate-400 text-lg leading-relaxed">
-          The <strong className="text-indigo-400 font-semibold">Flutter Container</strong> is a powerful convenience widget that combines common painting, positioning, and sizing natively into one unified bounding box. Often comparable to a standard HTML <code className="bg-slate-800 px-2 py-1 rounded text-sm font-mono">&lt;div&gt;</code>, the container handles intricate padding gradients, box shadows, and background radius decorations, making it the absolute most critical foundational UI building block in cross-platform mobile development!
-        </p>
-      </section>
+      <FeatureCards />
     </main>
   );
 }
