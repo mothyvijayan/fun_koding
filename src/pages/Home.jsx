@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Hero from '../components/Hero';
 import FeatureCards from '../components/FeatureCards';
+import AdBanner from '../components/AdBanner';
 
 const SliderControl = ({ label, value, min, max, onChange, unit = "px" }) => (
   <div className="space-y-3">
@@ -137,7 +138,20 @@ export default function Home() {
         </aside>
       </div>
 
+      <AdBanner />
       <FeatureCards />
+      
+      {/* Educational Section */}
+      <section className="py-24 px-8 max-w-4xl mx-auto w-full text-center relative z-10">
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Why use a Visual UI Generator for Flutter?</h2>
+        <p className="text-slate-400 text-lg leading-relaxed mb-8">
+          Building modern mobile applications requires a high level of precision in UI design. Our Flutter UI Generator (funkoding) helps developers bridge the gap between design and code. By providing a visual interface for complex BoxDecoration and Container properties, we eliminate the trial-and-error process of manual coding.
+        </p>
+        <p className="text-slate-400 text-lg leading-relaxed">
+          Whether you are a beginner learning Flutter or a professional building complex layouts, our tool ensures your UI is consistent, performant, and beautiful.
+        </p>
+      </section>
+      <AdBanner />
     </main>
   );
 }

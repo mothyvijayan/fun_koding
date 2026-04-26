@@ -5,12 +5,13 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[128px] pointer-events-none"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-          <span className="text-white">Design Flutter UI </span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Visually</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
+          <span className="text-white">Professional Flutter UI Generator </span>
+          <br className="hidden md:block" />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">& Style Tool</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-          The fastest way to generate clean, production-ready Dart code for your website.
+          Simplify your mobile development workflow. Visually design custom Flutter containers, decorations, and layouts, then instantly export production-ready Dart code.
         </p>
         <button 
           onClick={() => document.getElementById('generator')?.scrollIntoView({ behavior: 'smooth' })}
