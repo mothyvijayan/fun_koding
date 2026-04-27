@@ -141,15 +141,118 @@ export default function Home() {
       <AdBanner />
       <FeatureCards />
       
-      {/* Educational Section */}
-      <section className="py-24 px-8 max-w-4xl mx-auto w-full text-center relative z-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Why use a Visual UI Generator for Flutter?</h2>
-        <p className="text-slate-400 text-lg leading-relaxed mb-8">
-          Building modern mobile applications requires a high level of precision in UI design. Our Flutter UI Generator (funkoding) helps developers bridge the gap between design and code. By providing a visual interface for complex BoxDecoration and Container properties, we eliminate the trial-and-error process of manual coding.
-        </p>
-        <p className="text-slate-400 text-lg leading-relaxed">
-          Whether you are a beginner learning Flutter or a professional building complex layouts, our tool ensures your UI is consistent, performant, and beautiful.
-        </p>
+      {/* 1. Why Funkoding? Section */}
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto w-full relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Modern UI Design Made Simple</h2>
+            <div className="h-1 w-20 bg-purple-500 rounded-full"></div>
+          </div>
+          <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
+            <p>
+              Building modern mobile applications requires precision. Visual design tools dramatically reduce the 'Trial and Error' process for mobile developers by allowing you to instantly preview container styling without constantly hot-reloading your application.
+            </p>
+            <p>
+              By bridging the gap between design and development, you can achieve faster deployment times and maintain cleaner codebases. Focus on building features while we handle the boilerplate styling properties.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. The 3-Step Workflow Section */}
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto w-full relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">The 3-Step Workflow</h2>
+          <p className="text-slate-400">From concept to production-ready code in seconds.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+            <div className="text-purple-400 font-mono text-xl mb-4 font-semibold tracking-wider">Step 01</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Visual Tweaking</h3>
+            <p className="text-slate-400 leading-relaxed">Use intuitive sliders to adjust borders, shadows, and colors instantly. No more guessing numeric values for the perfect look.</p>
+          </div>
+          {/* Card 2 */}
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+            <div className="text-emerald-400 font-mono text-xl mb-4 font-semibold tracking-wider">Step 02</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Real-time Preview</h3>
+            <p className="text-slate-400 leading-relaxed">See exactly how your widget will look on a real mobile device screen before you even copy a single line of code.</p>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors">
+            <div className="text-blue-400 font-mono text-xl mb-4 font-semibold tracking-wider">Step 03</div>
+            <h3 className="text-xl font-semibold text-white mb-3">One-Click Export</h3>
+            <p className="text-slate-400 leading-relaxed">Copy production-ready Dart code that fully supports Null Safety, ready to be pasted directly into your IDE.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Advanced Design Styles Section */}
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto w-full relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Advanced Design Styles</h2>
+          <p className="text-slate-400">Create the most trending UI patterns with zero effort.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
+            <div className="h-12 w-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6 border border-purple-500/30">
+              <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3">Glassmorphism</h3>
+            <p className="text-slate-400 leading-relaxed">Use our tool to master frosted glass effects. We handle the complex BoxDecoration logic combining background Opacity and backdrop Blur filters.</p>
+          </div>
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
+            <div className="h-12 w-12 rounded-xl bg-orange-500/20 flex items-center justify-center mb-6 border border-orange-500/30">
+              <svg className="w-6 h-6 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3">Neumorphic UI</h3>
+            <p className="text-slate-400 leading-relaxed">Easily implement 'Soft UI' designs. Our generator accurately calculates double shadows—highlighting and shading—to create extruded or pressed surface effects.</p>
+          </div>
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
+            <div className="h-12 w-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 border border-blue-500/30">
+              <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3">Material 3</h3>
+            <p className="text-slate-400 leading-relaxed">Built with full compatibility for the latest Google Design standards. Generate containers that fit perfectly into your Material App themes.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Flutter Performance Tips */}
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto w-full relative z-10 mb-20">
+        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Optimizing Your Flutter Widgets</h2>
+          <p className="text-slate-400 mb-8 text-lg">Follow these best practices to ensure your generated containers don't impact your app's frame rate:</p>
+          <ul className="space-y-6">
+            <li className="flex items-start gap-5">
+              <div className="mt-1 bg-emerald-500/20 p-2 rounded-full border border-emerald-500/30 shrink-0">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <div>
+                <strong className="text-slate-200 block mb-2 text-lg">Leverage Const Constructors</strong>
+                <span className="text-slate-400 leading-relaxed block">Always use the 'const' keyword for your container decorations when properties are static. This tells Flutter to reuse the widget instead of rebuilding it.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-5">
+              <div className="mt-1 bg-emerald-500/20 p-2 rounded-full border border-emerald-500/30 shrink-0">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <div>
+                <strong className="text-slate-200 block mb-2 text-lg">Avoid Unnecessary Repaints</strong>
+                <span className="text-slate-400 leading-relaxed block">Complex shadows and blur effects can cause performance drops if animated. Extract heavy containers into simpler components or use RepaintBoundary when animating a parent widget.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-5">
+              <div className="mt-1 bg-emerald-500/20 p-2 rounded-full border border-emerald-500/30 shrink-0">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <div>
+                <strong className="text-slate-200 block mb-2 text-lg">Optimize Shadow Spread</strong>
+                <span className="text-slate-400 leading-relaxed block">Keep your shadow blur and spread radii reasonable. Extravagant shadowing requires more processing power, especially on low-end mobile devices.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <AdBanner />
     </main>
